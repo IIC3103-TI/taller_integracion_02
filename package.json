@@ -1,0 +1,25 @@
+{
+  "name": "ti-02",
+  "version": "1.0.0",
+  "description": "Tarea numero 2 para el ramo de taller de integración",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jddm11/taller_integracion_02.git"
+  },
+  "keywords": [
+    "ti",
+    "ci",
+    "nodejs",
+    "travis"
+  ],
+  "author": "Juan Diego Diaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jddm11/taller_integracion_02/issues"
+  },
+  "homepage": "https://github.com/jddm11/taller_integracion_02#readme"
+}
