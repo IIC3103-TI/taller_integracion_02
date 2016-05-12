@@ -2,7 +2,7 @@
   "name": "ti-02",
   "version": "1.0.0",
   "description": "Tarea numero 2 para el ramo de taller de integración",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,5 +21,17 @@
   "bugs": {
     "url": "https://github.com/jddm11/taller_integracion_02/issues"
   },
-  "homepage": "https://github.com/jddm11/taller_integracion_02#readme"
+  "homepage": "https://github.com/jddm11/taller_integracion_02#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "chai": "^3.5.0",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.4",
+    "http": "0.0.0",
+    "instagram-node": "^0.5.8",
+    "mocha": "^2.4.5",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
+    "request": "^2.72.0"
+  }
 }
