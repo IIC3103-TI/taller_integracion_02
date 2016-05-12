@@ -24,18 +24,16 @@
   "homepage": "https://github.com/jddm11/taller_integracion_02#readme",
   "dependencies": {
     "body-parser": "^1.15.1",
-    "chai": "^3.5.0",
-    "chai-http": "^2.0.1",
     "cookie-parser": "^1.4.1",
     "express": "^4.13.4",
-    "http": "0.0.0",
-    "instagram-node": "^0.5.8",
-    "mocha": "^2.4.5",
     "morgan": "^1.7.0",
     "path": "^0.12.7",
     "request": "^2.72.0"
   },
   "devDependencies": {
-    "chai-http": "^2.0.1"
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.9",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.4.5"
   }
 }

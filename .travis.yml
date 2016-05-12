@@ -17,3 +17,4 @@ deploy:
   app: ti-02-instagram
   api_key:
     secure: PmHYyePdbvV+FZL2kZR07jF3JsiFMbzcgpg26Gm6tszmrBTVd0JFabRUKk5ufBaXXmNQX6D+uMoThPKa4le4B7VS1x1qrLQToIvslz89OMcZD2f31Fq+Kx2M1AYQgez8s2I8WnaHkUR0VwLCCIUG1V8gwihHpUNz6j6c/frbVSC6zYlbL3DVV9KQumDDjRY6APbbHJkJqytm69GQHL+kKdqkbCxVuzj+vCcQB6z0PrU2VxWSB2LMrUAlILArrpbmHXjJxXKew68K2TMQ3U6NQ/QwRBUPNGMOptMOjYPzMc+LjA5tFvpJp3o3TbtC0KMBc3O7IL1A568Ii89xDid4N5rpKAhdWfyakCdxYPlwW9INpM5fpKt5AsjsMP817335Oj7oBZzumDXcuUtTbFnBjMpJLUn7q/4NhnrVrTkEQYEDGYS6chnW0IPO5anMRnpsk1rDQZmB6HwqpcKbg1jQl2KVv/mtIY3Lyy8G088OPyeHSg+HsWQ2o/nFr/oA9KcEsru6G4O1UpVPky4TfSKNDL6x8GpoquxQSbF5/VMFFnOkycpG++KqLYKcYOm/zuSSM86lZJaZY/0/b4uTAlFEjcTUaJBMoyMEVgVDeUBj66SD2vA6uv4He7/Ks+SHDRxxbChAy0E/h5ohun0aUgudKZL4x+fJbF75a3aNE7l8mbY=
+after_script: NODE_ENV=test istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
