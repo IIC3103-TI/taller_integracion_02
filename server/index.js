@@ -9,10 +9,10 @@ var http = require('http');
 // *** routes *** //
 var routes = require('./routes/index.js');
 
-app.set('port', process.env.PORT || 5000);
-
 // *** express instance *** //
 var app = express();
+
+app.set('port', process.env.PORT || 5000);
 
 // *** config middleware *** //
 app.use(logger('dev'));
