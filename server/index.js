@@ -12,6 +12,8 @@ var routes = require('./routes/index.js');
 // *** express instance *** //
 var app = express();
 
+app.set('port', process.env.PORT || 5000);
+
 // *** config middleware *** //
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -24,7 +26,7 @@ app.use('/', routes);
 
 // *** server config *** //
 var server   = http.createServer(app);
-server.listen(2000, function() {
+server.listen(app.get('port'), function() {
   console.log("Node server running on http://localhost:2000");
 });
 
