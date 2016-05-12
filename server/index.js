@@ -27,7 +27,7 @@ app.use('/', routes);
 // *** server config *** //
 var server   = http.createServer(app);
 server.listen(app.get('port'), function() {
-  console.log("Node server running on http://localhost:2000");
+  console.log("Node server running on http://localhost:5000");
 });
 
 module.exports = app;
