@@ -39,7 +39,7 @@ describe('Instagram integration', function() {
         });
       });*/
 
-   it('expect list from instagram/tag/busca', function(done) {S
+   it('expect list from instagram/tag/busca', function(done) {
      this.timeout(0);
      request({
       url: url +'/instagram/tag/busca',
@@ -85,7 +85,6 @@ describe('Instagram integration', function() {
       },
       method: 'POST'
     }, function(error, response, body) {
-          console.log(error);
           expect(response.statusCode).to.equal(200);
          done();
         });
