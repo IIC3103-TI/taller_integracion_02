@@ -62,6 +62,7 @@ var search_tag = function(req, res) {
 					}
  					result['posts'].push(post);
 				}
+				result['version'] = '1.0.0';
 				return res.json(result);
 
 		  	});
