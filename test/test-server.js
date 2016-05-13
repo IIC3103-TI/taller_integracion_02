@@ -67,7 +67,7 @@ describe('Instagram integration', function() {
       },
       method: 'POST'
     }, function(error, response, body) {
-          expect(response.statusCode).to.equal(400);
+          expect(response.statusCode).to.equal(200);
          done();
         });
       });
