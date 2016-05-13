@@ -63,7 +63,6 @@ describe('Instagram integration', function() {
      request({
       url: url +'/instagram/tag/busca',
       form:{
-        tag:'',
         access_token: ''
       },
       method: 'POST'
