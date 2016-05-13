@@ -3,7 +3,7 @@ var request = require('request');
 var server = require('../server');
 var index  = require('../server/routes')
 var access_token = '2019746130.59a3f2b.86a0135240404ed5b908a14c0a2d9402';
-var url = process.env.URL_APP || 'http://localhost:5000';
+var url = 'http://localhost:5000';//process.env.URL_APP
 
 describe('Instagram integration', function() {
   /*it('expect get extra info from tag', function(done) {
@@ -67,7 +67,7 @@ describe('Instagram integration', function() {
       },
       method: 'POST'
     }, function(error, response, body) {
-          expect(response.statusCode).to.equal(200);
+          expect(response.statusCode).to.equal(400);
          done();
         });
       });
