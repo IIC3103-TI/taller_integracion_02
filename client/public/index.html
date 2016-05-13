@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
 		<script type="text/javascript">
 			$( document ).ready(function() {
+				$( "#results").html('');
 				$('#btn_search').on('click',function(){
 				  $.ajax({
 					  url: "/instagram/tag/busca",

@@ -22,7 +22,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../client/public')));
 
 // *** main routes *** //
-app.use('/', routes);
+app.use('/', routes.router);
+
 
 // *** server config *** //
 var server   = http.createServer(app);
