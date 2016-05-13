@@ -52,8 +52,8 @@ describe('Instagram integration', function() {
           expect(response).to.exist;
           expect(response.statusCode).to.equal(200);
           expect(body).be.json;
-          var json = JSON.parse(response.body);
-          expect(json).to.have.property("posts");
+          //var json = JSON.parse(response.body);
+          expect(body).to.have.property("posts");
          done();
         });
       });
@@ -64,11 +64,10 @@ describe('Instagram integration', function() {
       url: url +'/instagram/tag/busca',
       form:{
         tag:'',
-        access_token: access_token
+        access_token: ''
       },
       method: 'POST'
     }, function(error, response, body) {
-          console.log(url);
           expect(response.statusCode).to.equal(400);
          done();
         });
