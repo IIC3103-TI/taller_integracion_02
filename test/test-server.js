@@ -49,7 +49,6 @@ describe('Instagram integration', function() {
       },
       method: 'POST'
     }, function(error, response, body) {
-          console.log(error);
           expect(response).to.exist;
           expect(response.statusCode).to.equal(200);
           expect(body).be.json;
@@ -69,7 +68,7 @@ describe('Instagram integration', function() {
       },
       method: 'POST'
     }, function(error, response, body) {
-          console.log(error);
+          console.log(url);
           expect(response.statusCode).to.equal(400);
          done();
         });
@@ -91,21 +90,18 @@ describe('Instagram integration', function() {
       });
 
    it('expect string be empty', function(done) {
-
       var empty_string = index.is_empty('');
       expect(empty_string).to.equal(true);
       done();
    });
 
   it('expect option_tag_count be json', function(done) {
-
       var result = index.get_tags_count('tag','token');
       expect(result).be.json;
       done();
    });
 
    it('expect option_tag_info be json', function(done) {
-
       var result = index.get_tags_info('tag','token');
       expect(result).be.json;
       done();
