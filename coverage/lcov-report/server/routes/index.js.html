@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for server/routes/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">server/routes/</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">47.62% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>20/42</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">56.25% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>9/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">48.72% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>19/39</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var express = require('express');
+var request = require('request');
+var router  = express.Router();
+&nbsp;
+var is_empty = function(str) {
+    return (!str || 0 === str.length);
+}
+&nbsp;
+var get_tags_info = function(tag, access_token)
+{
+	return {
+	  uri:'https://api.instagram.com/v1/tags/'+ tag +'/media/recent?'+
+	  'access_token=' + access_token,
+	  method: "GET",
+	  headers: {
+	    'Content-type': 'application/json'
+	  }
+	};
+}
+&nbsp;
+var get_tags_count = function(tag, access_token)
+{
+	return {
+	  uri:'https://api.instagram.com/v1/tags/'+ tag +'?'+
+	  'access_token='+ access_token,
+	  method: "GET",
+	  headers: {
+	    'Content-type': 'application/json'
+	  }
+	};
+}
+&nbsp;
+var search_tag = function(req, res) {
+	if(is_empty(req.body.tag) || is_empty(req.body.access_token)){ return res.end(res.writeHead(400, ''));}
+	var tags_option = get_tags_count(req.body.tag,req.body.access_token);
+	request(tags_option,function(error,response, body) {
+		<span class="missing-if-branch" title="if path not taken" >I</span>if(error){ <span class="cstat-no" title="statement not covered" >return res.json({ status:false, result: JSON.parse(error)}); </span>}
+	  	var total_tags = JSON.parse(body);
+	  	<span class="missing-if-branch" title="if path not taken" >I</span>if(total_tags.data &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >total_tags.data.media_count &gt; 0)</span>
+	  	{
+<span class="cstat-no" title="statement not covered" >		  	var tags_info_option = get_tags_info(req.body.tag,req.body.access_token);</span>
+<span class="cstat-no" title="statement not covered" >		  	request(tags_info_option,<span class="fstat-no" title="function not covered" >function(error_tags,response_tags,body_tags){</span></span>
+<span class="cstat-no" title="statement not covered" >		  		if(error_tags){ <span class="cstat-no" title="statement not covered" >return res.json({ status:false, result: JSON.parse(error_tags) }); </span>}</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		  		var result = new Object;</span>
+<span class="cstat-no" title="statement not covered" >		  		result['metadata'] = new Object;</span>
+<span class="cstat-no" title="statement not covered" >		  		result['metadata']['total'] = total_tags.data.media_count;</span>
+<span class="cstat-no" title="statement not covered" >		  		result['posts'] = [];</span>
+<span class="cstat-no" title="statement not covered" >		  		var info_tags = JSON.parse(body_tags);</span>
+<span class="cstat-no" title="statement not covered" >		  		var data = info_tags.data;</span>
+<span class="cstat-no" title="statement not covered" >				var len = data.length;</span>
+<span class="cstat-no" title="statement not covered" >				for(var i = 0; i &lt; len; i ++ )</span>
+				{
+<span class="cstat-no" title="statement not covered" >					var post = new Object;</span>
+<span class="cstat-no" title="statement not covered" >					post['tags'] 	 = data[i].tags;</span>
+<span class="cstat-no" title="statement not covered" >					post['username'] = data[i].user.username;</span>
+<span class="cstat-no" title="statement not covered" >					post['likes']    = data[i].likes.count;</span>
+<span class="cstat-no" title="statement not covered" >					post['url']      = data[i].images.standard_resolution.url;</span>
+<span class="cstat-no" title="statement not covered" >					if(data[i].caption)</span>
+					{
+<span class="cstat-no" title="statement not covered" >						post['caption']  = data[i].caption.text;</span>
+					}
+<span class="cstat-no" title="statement not covered" > 					result['posts'].push(post);</span>
+				}
+<span class="cstat-no" title="statement not covered" >				return res.json(result);</span>
+&nbsp;
+		  	});
+	  	}else
+	  	{
+	  		return res.json({ status:false, result: ''});
+	  	}
+	})
+&nbsp;
+&nbsp;
+	
+}
+	
+// *** api routes *** //
+router.post('/instagram/tag/busca', search_tag);
+&nbsp;
+&nbsp;
+&nbsp;
+module.exports = {
+&nbsp;
+	is_empty       : is_empty,
+	get_tags_info  : get_tags_info,
+	get_tags_count : get_tags_count,
+	search_tag     : search_tag,
+	router		   : router
+&nbsp;
+};</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu May 12 2016 23:10:00 GMT-0300 (CLST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
