@@ -3,4 +3,4 @@
 [![Code Climate](https://codeclimate.com/github/IIC3103-TI/taller_integracion_02/badges/gpa.svg)](https://codeclimate.com/github/IIC3103-TI/taller_integracion_02)
 [![bitHound Dependencies](https://www.bithound.io/github/IIC3103-TI/taller_integracion_02/badges/dependencies.svg)](https://www.bithound.io/github/IIC3103-TI/taller_integracion_02/master/dependencies/npm)
 
-# Tarea 02 taller de integración travis + nodejs + mocha + heroku
+# Tarea 02 taller de integración travis + nodejs + mocha + istanbul + heroku
