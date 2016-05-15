@@ -1,6 +1,7 @@
-var express = require('express');
-var request = require('request');
-var router  = express.Router();
+var express    = require('express');
+var multiparty = require('multiparty');
+var request    = require('request');
+var router     = express.Router();
 
 var is_empty = function(str) {
     return (!str || 0 === str.length);
@@ -31,14 +32,23 @@ var get_tags_count = function(tag, access_token)
 }
 
 var search_tag = function(req, res) {
-	if(is_empty(req.body.tag) || is_empty(req.body.access_token)){ return res.end(res.writeHead(400, ''));}
-	var tags_option = get_tags_count(req.body.tag,req.body.access_token);
+    var form = new multiparty.Form();
+    form.parse(req, function(err, fields, files) {
+	if(!fields)
+	{	var tag 	 = req.body.tag;
+		var access_token = req.body.access_token;
+	}else{	
+		var tag 	 = fields['tag'][0];
+		var access_token = fields['access_token'][0];
+	}
+	if(is_empty(tag) || is_empty(access_token)){ return res.end(res.writeHead(400, ''));}
+	var tags_option = get_tags_count(tag,access_token);
 	request(tags_option,function(error,response, body) {
 		if(error){ return res.json({ status:false, result: JSON.parse(error)}); }
 	  	var total_tags = JSON.parse(body);
 	  	if(total_tags.data && total_tags.data.media_count > 0)
 	  	{
-		  	var tags_info_option = get_tags_info(req.body.tag,req.body.access_token);
+		  	var tags_info_option = get_tags_info(tag,access_token);
 		  	request(tags_info_option,function(error_tags,response_tags,body_tags){
 		  		if(error_tags){ return res.json({ status:false, result: JSON.parse(error_tags) }); }
 
@@ -72,7 +82,7 @@ var search_tag = function(req, res) {
 	  	}
 	})
 
-
+    });
 	
 }
 	
