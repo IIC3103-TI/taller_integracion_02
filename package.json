@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jddm11/taller_integracion_02.git"
+    "url": "git+https://github.com/jddm11/IIC3103-TI/taller_integracion_02.git"
   },
   "keywords": [
     "ti",
@@ -19,14 +19,15 @@
   "author": "Juan Diego Diaz",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jddm11/taller_integracion_02/issues"
+    "url": "https://github.com/jddm11/IIC3103-TI/taller_integracion_02/issues"
   },
-  "homepage": "https://github.com/jddm11/taller_integracion_02#readme",
+  "homepage": "https://github.com/jddm11/IIC3103-TI/taller_integracion_02#readme",
   "dependencies": {
     "body-parser": "^1.15.1",
     "cookie-parser": "^1.4.1",
     "express": "^4.13.4",
     "morgan": "^1.7.0",
+    "multiparty": "^4.1.2",
     "path": "^0.12.7",
     "request": "^2.72.0"
   },
